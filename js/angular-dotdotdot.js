@@ -9,7 +9,9 @@ angular.module('dotdotdot-angular', [])
 
                     // Wait for DOM to render
                     // NB. Don't use { watch: true } option in dotdotdot as it needlessly polls
-                    $timeout(element.dotdotdot, 400);
+                    $timeout(function() {
+                        element.dotdotdot();
+                    }, 400);
                 });
             }
         }
